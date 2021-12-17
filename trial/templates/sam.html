@@ -1,0 +1,20 @@
+<html>
+<body>
+<form method="POST", action="{{url_for('pre')}}">
+<label>ENTER LATTITUDE</label>
+<input type="text" name="latt"/>
+<label>ENTER LONGITUDE</label>
+<input type="text" name="long"/>
+<input type="submit" value="click">
+</form>
+
+{{prediction_text}}
+{% if prediction_text >= 0.1 %}
+      <p>earthquake</p>
+{% else %}
+	  <p>no earthquake</p>
+{% endif %}
+
+</body>
+
+</html>
